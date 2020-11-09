@@ -13,7 +13,7 @@ import axios from "axios";
 
    handleSubmit = async e => {
     e.preventDefault();
-    const url = `http://api.icndb.com/jokes/random/${this.state.jokes}`;
+    const url = `https://api.chucknorris.io/jokes/random/${this.state.jokes}`;
     const response = await axios.get(url);
    const responses = (response.data.value)
     this.setState({ data: responses })
@@ -32,9 +32,6 @@ import axios from "axios";
   }
 
   render() {
-    // const details = this.state.data.map(joke=>{
-    //   return <li>{joke.joke}</li>
-    // })
     return (
       <div className="form-group">
       <h1 className="heading display-5 pb-3">Enter Number of Jokes</h1>
