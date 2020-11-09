@@ -13,7 +13,7 @@ import axios from "axios";
 
    handleSubmit = async e => {
     e.preventDefault();
-    const url = `http://api.icndb.com/jokes/random/${this.state.jokes}`;
+    const url = `https://api.icndb.com/jokes/random/${this.state.jokes}`;
     const response = await axios.get(url);
    const responses = (response.data.value)
     this.setState({ data: responses })
